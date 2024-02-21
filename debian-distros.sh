@@ -51,3 +51,12 @@ echo "--> Copy p10k configs for root..."
 cp .p10k.zsh ~/.p10k.zsh
 echo "> 🖌 [Powerlevel10k] instaled."
 
+echo ""
+echo "--------------------"
+echo ""
+
+# AURA THEME GNOME
+echo "=> ⏳ Installing [AURA THEME GNOME]..."
+cp aura-theme.dconf ~/aura-theme.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < ~/aura-theme.dconf
+echo "> 👻  [AURA THEME GNOME] instaled."
