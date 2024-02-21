@@ -60,3 +60,17 @@ echo "=> ⏳ Installing [AURA THEME GNOME]..."
 cp aura-theme.dconf ~/aura-theme.dconf
 dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < ~/aura-theme.dconf
 echo "> 👻  [AURA THEME GNOME] instaled."
+
+echo ""
+echo "--------------------"
+echo ""
+
+# ASDF
+echo "=> ⏳ Installing [ASDF]..."
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+echo "--> Installing ASDF plugins..."
+source ~/.zshrc
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install nodejs 18.19.1
+asdf global nodejs 18.19.1
+echo "> 🔖  [ASDF] instaled."
