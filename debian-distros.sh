@@ -97,3 +97,14 @@ sudo install lazygit /usr/local/bin
 rm -rf lazygit
 rm -rf lazygit.tar.gz
 echo "> 😴 [LAZYGIT] instaled."
+
+echo ""
+echo "--------------------"
+echo ""
+
+# TMUX
+echo "=> ⏳ Installing [TMUX]..."
+sudo apt install tmux
+cp .tmux.conf ~/.tmux.conf
+
+echo "> 👥 [TMUX] instaled."
