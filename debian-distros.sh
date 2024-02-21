@@ -74,3 +74,12 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs 18.19.1
 asdf global nodejs 18.19.1
 echo "> 🔖  [ASDF] instaled."
+
+echo ""
+echo "--------------------"
+echo ""
+
+# ZSH
+echo "=> ⏳ Installing [GITMOJI]..."
+npm i -g gitmoji-cli
+echo "> 😜 [GITMOJI] instaled."
