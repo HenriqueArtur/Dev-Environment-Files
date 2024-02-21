@@ -40,9 +40,9 @@ echo "--> Installing Zsh plugins..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
-  ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+	${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 git clone https://github.com/marlonrichert/zsh-autocomplete.git \
-  ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autocomplete
+	${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autocomplete
 echo "--> Copy Oh My Zsh configs..."
 cp .zshrc ~/.zshrc
 echo "--> Installing p10k theme..."
@@ -58,7 +58,7 @@ echo ""
 # AURA THEME GNOME
 echo "=> ⏳ Installing [AURA THEME GNOME]..."
 cp aura-theme.dconf ~/aura-theme.dconf
-dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < ~/aura-theme.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ <~/aura-theme.dconf
 echo "> 👻  [AURA THEME GNOME] instaled."
 
 echo ""
@@ -106,5 +106,25 @@ echo ""
 echo "=> ⏳ Installing [TMUX]..."
 sudo apt install tmux
 cp .tmux.conf ~/.tmux.conf
-
 echo "> 👥 [TMUX] instaled."
+
+echo ""
+echo "--------------------"
+echo ""
+
+# NEOVIM
+echo "=> ⏳ Installing [NEOVIM]..."
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+sudo mkdir -p /opt/nvim
+sudo mv nvim.appimage /opt/nvim/nvim
+rm -rf nvim.appimage
+sudo cp -r ./configs/nvim ~/.configs
+echo "> 📑 [NEOVIM] instaled."
+
+echo ""
+echo "--------------------"
+echo ""
+
+echo "~ The End ~"
