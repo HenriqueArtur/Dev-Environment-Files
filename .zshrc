@@ -123,3 +123,6 @@ export KERL_CONFIGURE_OPTIONS="--without-wx --without-javac"
 
 # Aliases
 alias lg="lazygit"
+
+# Start with tmux
+[[ $TERM != "screen" ]] && exec tmux
