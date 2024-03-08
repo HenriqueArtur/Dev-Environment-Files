@@ -9,6 +9,8 @@ echo "--> 🔄 Change between workspace apps"
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 echo "> 🔧 Finished configs general systme, behavior"
 
+sudo apt install xclip
+
 echo ""
 echo "--------------------"
 echo ""
