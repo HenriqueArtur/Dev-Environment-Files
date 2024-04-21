@@ -13,6 +13,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
+  command = "silent! EslintFixAll",
+  group = vim.api.nvim_create_augroup("MyAutocmdsJavaScripFormatting", {}),
+})
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins

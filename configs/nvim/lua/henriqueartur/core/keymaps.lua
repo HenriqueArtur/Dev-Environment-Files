@@ -3,8 +3,9 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
----------------------
--- General Keymaps -------------------
+-----------------------------
+------ General Keymaps ------
+-----------------------------
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
@@ -26,7 +27,12 @@ vim.keymap.set("n", "<leader>sp", '<cmd>lua require("spectre").open_file_search(
   desc = "Search on current file",
 })
 
+-- Git Commands
+vim.keymap.set("n", "<leader>gp", function()
+  vim.api.nvim_command("!git push origin $(git rev-parse --abbrev-ref HEAD)")
+end, { noremap = true, desc = "git push current branch" })
+
 -- Gitmoji
-vim.keymap.set("n", "<leader>G", ":Telescope gitmoji<CR>", {
+vim.keymap.set("n", "<leader>gm", ":Telescope gitmoji<CR>", {
   desc = "Gitmoji",
 })
