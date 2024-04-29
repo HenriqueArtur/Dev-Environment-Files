@@ -31,8 +31,3 @@ vim.keymap.set("n", "<leader>sp", '<cmd>lua require("spectre").open_file_search(
 vim.keymap.set("n", "<leader>gp", function()
   vim.api.nvim_command("!git push origin $(git rev-parse --abbrev-ref HEAD)")
 end, { noremap = true, desc = "git push current branch" })
-
--- Gitmoji
-vim.keymap.set("n", "<leader>gm", ":Telescope gitmoji<CR>", {
-  desc = "Gitmoji",
-})
