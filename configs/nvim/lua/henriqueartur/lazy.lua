@@ -12,6 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+vim.opt.spell = true
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
